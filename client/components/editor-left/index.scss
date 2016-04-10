@@ -1,0 +1,28 @@
+& {
+  width: 200px;
+  height: 580px;
+  background-color: #222d32;
+  margin-right: 10px;
+  padding-top: 20px;
+  .com-item {
+    padding: 10px;
+    padding-left: 20px;
+    color: #b8c7ce;
+    position: relative;
+    &::after {
+      content: ">";
+      position: absolute;
+      right: 19px;
+    }
+
+    &:hover {
+      border-left: solid 2px #3c8dbc;
+      font-size: 16px;
+      color:#fff;
+      background: #1E2821;
+    }
+    cursor: pointer;
+    //border-bottom: solid 1px #4A4646;
+    font-size: 14px;
+  }
+}

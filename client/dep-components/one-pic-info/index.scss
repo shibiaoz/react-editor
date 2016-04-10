@@ -1,0 +1,79 @@
+& {
+    // outline: solid 1px green;
+    padding: 28px 0px 28px 24px;
+    box-sizing: border-box;
+    background-color: white;
+    display: box;
+    display: -webkit-box;
+    border-bottom: solid 1px #e1e3e6;
+    .one-pic-left {
+        position: relative;
+        line-height: 46px;
+        -webkit-box-flex:1;
+        box-flex:1;
+        display: box;
+        display: -webkit-box;
+        flex-direction: column;
+        -webkit-direction: column;
+
+    }
+    @mixin heightflex($flex) {
+        height: 0;
+        box-flex: $flex;
+        -webkit-box-flex: $flex;
+    }
+    .desp {
+        padding-right: 10px;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .desp a {
+        @include heightflex(3);
+        font-size: 32px;
+        font-weight: 500;
+        color: black;
+    }
+    .bottom-column {
+        position: absolute;
+        bottom: 30px;
+        @include heightflex(1);
+        .tag {
+            font-size: 24px;
+            padding: 6px 10px;
+            text-align: center;
+            color: #fff;
+            border-radius: 4px;
+            background-color: #8290a5;
+        }
+        .support, .comment {
+            height:32px;
+            margin-right: 24px;
+            float: right;
+            &::before, &::after {
+                clear: both;
+                content: '.';
+                visibility: hidden;
+                height: 0;
+            }
+            .text {
+                margin-left: 8px;
+                font-size: 24px;
+                color: #c4c7cc;
+                vertical-align: middle;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .one-pic-right {
+        color: blue;
+        img {
+            width: 240px;
+            height: 170px;
+        }
+    }
+}

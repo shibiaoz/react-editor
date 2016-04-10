@@ -1,0 +1,39 @@
+& {
+  position: relative;
+  [class^='client-dep-components'] {
+    pointer-events:none
+  }
+  .del-btn {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    z-index: 2;
+  }
+  .active {
+    //background: #5bc0de;
+    border-left: solid 5px yellow;
+    position: relative;
+  }
+  .groupwraper {
+    > div {
+      min-height: 100px;
+      //background-color: #00b3ee;
+      outline: solid 1px #00b3ee;
+    }
+    &::before {
+      clear: both;
+      content: "双击点我编辑group";
+      height: 50px;
+      line-height: 50px;
+      color: blue;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      left: 100px;
+    }
+  }
+}

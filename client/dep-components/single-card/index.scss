@@ -1,0 +1,46 @@
+& {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    height: 80px;
+    @mixin inlineb() {
+        display: inline-block;
+    }
+    .line {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background: #fd5764;
+        width: 6px;
+        height: 60px;
+    }
+    .icon {
+        float: left;
+        margin: 14px 24px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .title {
+        float: left;
+        margin-left: 10px;
+        backcground: #fff;
+        width: 72%;
+        font-size: 32px;
+        line-height: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .more-button {
+        float:right;
+        vertical-align: middle;
+        color: #157FD2;
+        font-size: 32px;
+        line-height: 80px;
+        height: 80px;
+        cursor: pointer;
+    }
+}
